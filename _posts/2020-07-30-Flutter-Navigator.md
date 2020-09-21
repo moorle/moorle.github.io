@@ -64,7 +64,7 @@ A widget that manages a set of child widgets with a stack discipline.
 
 ## Navigator的查找
 
-Navigator的查找是通过Buildcontext的
+Navigator的查找过程是通过Buildcontext的以下两个方法查询到它的实例的，具体使用那个是根据他的参数决定的，默认是使用findAncestorStateOfType
 
 ```dart
     1. context.findRootAncestorStateOfType<NavigatorState>()
@@ -72,7 +72,7 @@ Navigator的查找是通过Buildcontext的
     2. context.findAncestorStateOfType<NavigatorState>()
 ```
 
-来查找的，两者的差别在于，
+来查找的，两者的差别在于，一个查询最顶层祖先的NavigatorState， 一个查询最近祖先NavigatorState
 
 
 
